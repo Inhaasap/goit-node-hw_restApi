@@ -10,6 +10,7 @@ const userSchema = new Schema(
     password: {
       type: String,
       required: [true, "Set password for user"],
+      minlength: 8,
     },
     email: {
       type: String,
@@ -28,6 +29,7 @@ const userSchema = new Schema(
   },
   {
     versionKey: false,
+    timestamps: true,
   }
 );
 
